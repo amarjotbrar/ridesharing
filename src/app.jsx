@@ -13,7 +13,6 @@ function app(){
             <h3>Analyse your customers and business growth....</h3>
         </div>
 
-        <TimeRange />
         <Graphs />
         <Footer />
         </>

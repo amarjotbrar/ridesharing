@@ -1,17 +1,19 @@
 import React from "react";
 import Button from '@mui/material/Button';
 
-function TimeRange(){
-    return(
-        <>
+function TimeRange({ onTimeRangeChange }) {
+    const handleClick = (months) => {
+        onTimeRangeChange(months);
+    };
+
+    return (
         <div className="timeContainer">
-            <Button id="twelvebutton" variant="outlined">12 Months</Button>
-            <Button id="sixbutton" variant="outlined">6 Months</Button>
-            <Button id="sevenbutton" variant="outlined">7 Days</Button>
-            <Button id="hoursbutton" variant="outlined">24 Hours</Button>
+            <Button id="12" variant="outlined" onClick={() => handleClick(12)}>12 Months</Button>
+            <Button id="6" variant="outlined" onClick={() => handleClick(6)}>6 Months</Button>
+            <Button id="7" variant="outlined" onClick={() => handleClick(7)}>7 Days</Button>
+            <Button id="24" variant="outlined" onClick={() => handleClick(24)}>24 Hours</Button>
         </div>
-        </>
-    )
+    );
 }
 
 export default TimeRange;
