@@ -5,10 +5,10 @@ function TimeRange(){
     return(
         <>
         <div className="timeContainer">
-            <Button variant="outlined">12 Months</Button>
-            <Button variant="outlined">6 Months</Button>
-            <Button variant="outlined">7 Days</Button>
-            <Button variant="outlined">24 Hours</Button>
+            <Button id="twelvebutton" variant="outlined">12 Months</Button>
+            <Button id="sixbutton" variant="outlined">6 Months</Button>
+            <Button id="sevenbutton" variant="outlined">7 Days</Button>
+            <Button id="hoursbutton" variant="outlined">24 Hours</Button>
         </div>
         </>
     )

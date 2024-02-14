@@ -6,17 +6,17 @@ body{
 
 a{
     text-decoration: none;
-    color: #a1cca5;
+    color: #B88B4A;
 }
 
 a:hover{
     scale: 2;
-    color: white;
+    color: #ddca7d;
 }
 
 .NavigationBar{
     height: 3.5rem;
-    background-color: #111d13;
+    background-color: #242331;
     display: flex;
     color: #a1cca5;
     align-items: center;
@@ -25,13 +25,15 @@ a:hover{
 .logo{
     flex:1;
     display: flex;
+    color: #B88B4A;
     align-items: center;
     justify-content: center;
 }
 .buttons{
-    flex:7;
-    color: #a1cca5;
+    flex:10;
+    color: #B88B4A;
     text-decoration: none;
+    font-weight: bold;
 }
 
 .headings{
@@ -49,9 +51,20 @@ a:hover{
 .material-symbols-outlined {
   font-variation-settings:
   'FILL' 0,
-  'wght' 400,
+  'wght' 600,
   'GRAD' 0,
   'opsz' 24
+}
+
+.timeContainer button{
+    background-color: #B88B4A;
+    color: #242331;
+    border: none;
+}
+
+.timeContainer button:hover{
+    background-color: #533e2d;
+    color: #ddca7d;
 }
 
 .graphs{

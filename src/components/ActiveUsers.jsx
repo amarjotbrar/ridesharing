@@ -2,11 +2,12 @@ import React from "react";
 import { render } from 'react-dom'
 import Highcharts from 'highcharts'
 import HighchartsReact from 'highcharts-react-official'
+import twelveact from "../data/twelveact";
 
 const options = {
    
     series: [{
-        data: [1, 2, 3, 5 , 3 , 7]
+        data: twelveact
     }]
 }
 
