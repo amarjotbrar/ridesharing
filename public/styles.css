@@ -16,7 +16,7 @@ a:hover{
 
 .NavigationBar{
     height: 3.5rem;
-    background-color: #242331;
+    background-color: #533e2d;
     display: flex;
     color: #a1cca5;
     align-items: center;
@@ -37,14 +37,15 @@ a:hover{
 }
 
 .headings{
-    margin:5em 0 0 3.5em;
+    margin:3em 0 0 3.5em;
+    color: #533e2d;
 }
 
 .timeContainer{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    margin: 6rem auto;
+    margin: 1.5rem auto;
 
 }
 
@@ -65,22 +66,33 @@ a:hover{
 .timeContainer button:hover{
     background-color: #533e2d;
     color: #ddca7d;
+    border: none;
 }
 
 .graphs{
     display:flex;
-    justify-content: center;
+    margin-top: 3em;
     align-items: center;
     justify-content: space-around;
-    
 }
 
 .newUserGraph{
-    background-color: antiquewhite;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #533e2d;
+    border-radius: 20px;
+}
+
+.newGraph{
+    background-color: aliceblue;
+    flex: 3;
 }
 
 .activeUserGraph{
-    background-color: #a1cca5;
+    background-color: #533e2d;
+    border-radius: 20px;
 }
 
 .activeUser{

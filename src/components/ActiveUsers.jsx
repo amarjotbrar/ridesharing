@@ -2,29 +2,21 @@ import React, { useState } from "react";
 import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
 import TimeRange from "./TimeRange";
-import twelveact from "../data/twelveact"; 
-import sixact from "../data/sixact";     
-import sevenact from "../data/sevenact";   
-import twentyfouract from "../data/twentyfouract";
+import { getHourlyRides, getHourlyUsers, getMonthlyUsers, getWeeklyUsers } from "../data/data";
 
 function ActiveUsers() {
     const [timeRange, setTimeRange] = useState(6); // Default time range is 6 months
-    const [chartData, setChartData] = useState(sixact); // Initial chart data is for 6 months
+    const [chartData, setChartData] = useState(getMonthlyUsers(6)[1]); // Initial chart data is for 6 months
 
     const updateChartData = (months) => {
         console.log("Updating chart data for", months, "months");
-        if (months === 6) {
-            console.log("Setting chart data for 6 months");
-            setChartData(sixact); // Set chart data for 6 months
-        } else if (months === 12) {
-            console.log("Setting chart data for 12 months");
-            setChartData(twelveact); // Set chart data for 12 months
+        if (months === 6 || months == 12) {
+            const [labels, data] = getMonthlyUsers(months);
+            setChartData(data);
         } else if (months === 7) {
-            console.log("Setting chart data for 7 days");
-            setChartData(sevenact); // Set chart data for 7 days
+            setChartData(getWeeklyUsers()); // Set chart data for 7 days
         } else if (months === 24) {
-            console.log("Setting chart data for 24 hours");
-            setChartData(twentyfouract); // Set chart data for 24 hours
+            setChartData(getHourlyUsers()); // Set chart data for 24 hours
         }
     };
     
@@ -36,7 +28,7 @@ function ActiveUsers() {
 
     const options = {
         title: {
-            text: 'Active users'
+            text: 'New Users'
           },
         series: [{ data: chartData }]
     };
