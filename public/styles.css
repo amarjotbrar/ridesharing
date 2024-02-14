@@ -1,0 +1,88 @@
+body{
+    margin: 0;
+    height: 100vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: #a1cca5;
+}
+
+a:hover{
+    scale: 2;
+    color: white;
+}
+
+.NavigationBar{
+    height: 3.5rem;
+    background-color: #111d13;
+    display: flex;
+    color: #a1cca5;
+    align-items: center;
+}
+
+.logo{
+    flex:1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.buttons{
+    flex:7;
+    color: #a1cca5;
+    text-decoration: none;
+}
+
+.headings{
+    margin:5em 0 0 3.5em;
+}
+
+.timeContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 6rem auto;
+
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+.graphs{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+
+.newUserGraph{
+    background-color: antiquewhite;
+}
+
+.activeUserGraph{
+    background-color: #a1cca5;
+}
+
+.activeUser{
+    min-width: 30rem;
+    text-align: center;
+    border: 10px solid transparent;
+}
+
+.newUser{
+    min-width: 30rem;
+    text-align: center;
+    border: 10px solid transparent;
+}
+
+.footer{
+    margin-top: 5rem;
+    text-align: center;
+}
