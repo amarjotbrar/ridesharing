@@ -5,12 +5,12 @@ import TimeRange from "./TimeRange";
 import { getHourlyRides, getMonthlyRides, getWeeklyRides } from "../data/data";
 
 function NewUsers() {
-    const [timeRange, setTimeRange] = useState(6); // Default time range is 6 months
-    const [chartData, setChartData] = useState(getMonthlyRides(6)[1]); // Initial chart data is for 6 months
+    const [timeRange, setTimeRange] = useState(12); // Default time range is 12 months
+    const [chartData, setChartData] = useState(getMonthlyRides(12)[1]); // Initial chart data is for 6 months
 
     const updateChartData = (months) => {
         console.log("Updating chart data for", months, "months");
-        if (months === 6 || months == 12) {
+        if (months === 6 || months === 12) {
             const [labels, data] = getMonthlyRides(months);
             setChartData(data);
         } else if (months === 7) {
